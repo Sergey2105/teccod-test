@@ -35,9 +35,9 @@ const ModalBase = (props: modal) => {
             <div className={clsx(styles.modal__window, styles[`modal__window--${size}`])} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.modal__header}>
                     <div className={styles.modal__title}>{title}</div>
-                    <div className={styles.modal__close} onClick={onCloseModal}>
+                    <button className={styles.modal__close} onClick={onCloseModal}>
                         <X />
-                    </div>
+                    </button>
                 </div>
                 <div className={clsx(styles.modal__body, styles[`modal__body--${size}`])}>{children}</div>
                 <div className={clsx(styles.modal__footer, styles[`modal__footer--${size}`])} style={{ gridTemplateColumns: `repeat(${footerLength}, 1fr)` }}>

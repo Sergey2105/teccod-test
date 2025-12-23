@@ -21,7 +21,7 @@ export default function ButtonCart() {
                 <Button btnType="img" onClick={toggleModal}>
                     <ShoppingCart />
                 </Button>
-                {!!itemsCount && <div className={styles["counter"]}>{itemsCount > MAX_CART_COUNTER ? `+${MAX_CART_COUNTER}` : itemsCount}</div>}
+                {!!itemsCount && <div className={styles["counter"]}>{itemsCount > MAX_CART_COUNTER ? `${MAX_CART_COUNTER}+` : itemsCount}</div>}
             </div>
         </>
     );
