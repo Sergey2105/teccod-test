@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { SERVICE_MOCK } from "@/mocks/services.mock";
-import ItemService from "../ItemService";
 import styles from "./index.module.scss";
 import { useCart } from "@/hooks/useCart";
+import ItemService from "../ItemService";
 
 interface ListServicesProps {
     className?: string;

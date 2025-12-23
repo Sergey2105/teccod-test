@@ -1,8 +1,8 @@
 import { memo } from "react";
 import styles from "./index.module.scss";
 import { Plus } from "lucide-react";
-import Button from "../ui/Button";
 import { formatPrice } from "@/utils/formatPrice";
+import Button from "../ui/Button";
 
 interface ItemServiceProps {
     name: string;

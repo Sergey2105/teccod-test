@@ -1,23 +1,22 @@
-import { useMemo } from "react";
+import Button from "@/components/ui/Button";
 import styles from "./index.module.scss";
-import Button from "../../../ui/Button";
 import type { SelectedService } from "@/shared/types";
-import { calculateTotal } from "@/utils/cartUtils";
 import { formatPrice } from "@/utils/formatPrice";
+import { memo } from "react";
 
 interface CartSummaryProps {
     cart: SelectedService[];
+    total: number;
 }
 
-export default function CartSummary(props: CartSummaryProps) {
-    const { cart } = props;
-    const totalPrice = useMemo(() => calculateTotal(cart), [cart]);
+function CartSummary(props: CartSummaryProps) {
+    const { cart, total } = props;
 
     return (
         <div className={styles["footer"]}>
             <div className={styles["footer_info"]}>
                 <span className={styles["footer_total"]}>Всего:</span>
-                <span className={styles["footer_amount"]}> {formatPrice(totalPrice)}</span>
+                <span className={styles["footer_amount"]}> {formatPrice(total)}</span>
             </div>
             <Button btnType="default" onClick={() => null} disabled={cart.length === 0}>
                 Оформить заказ
@@ -25,3 +24,4 @@ export default function CartSummary(props: CartSummaryProps) {
         </div>
     );
 }
+export default memo(CartSummary);

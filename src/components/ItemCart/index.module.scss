@@ -46,3 +46,20 @@
         gap: 8px;
     }
 }
+
+.controller {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.count {
+    width: 2rem;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}

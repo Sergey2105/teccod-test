@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import Home from "./components/pages/Home/index.tsx";
-import MainLayout from "./components/layouts/MainLayout.tsx";
+import MainLayout from "./components/layouts/MainLayout";
+import Home from "./components/pages/Home";
+
 
 function App() {
     return (
